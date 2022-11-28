@@ -24,7 +24,20 @@ class ProductManager {
         return maxId
     }
 
-    getProductById
+    getProducts() {
+        return this.products
+
+    }
+
+    getProductById = (productId) => {
+        const foundProduct = this.products.find(product => product.id === productId);
+
+        if (foundProduct) return foundProduct;
+
+        else console.log("Not found")
+    }
+
+
 }
 
 const productManager = new ProductManager();
